@@ -1,3 +1,4 @@
+// Copyright © 2021 Jonathan Dean Damiani
 import { ApolloClient, InMemoryCache, HttpLink } from '@apollo/client';
 import withApollo from "next-with-apollo";
 

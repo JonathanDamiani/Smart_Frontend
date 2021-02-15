@@ -1,13 +1,13 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+// Copyright © 2021 Jonathan Dean Damiani
+import Button from '@material-ui/core/Button';
 
 const Home = () =>{
 	return (
-		<div className={styles.container}>
-			<main className={styles.main}>
-				
-			</main>
-		</div>
+		<>
+			<Button variant="contained" color="primary">
+				test
+			</Button>
+		</>
 	)
 }
 export default Home;
