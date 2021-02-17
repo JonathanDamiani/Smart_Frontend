@@ -2,8 +2,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet as StyledComponentsSheets } from 'styled-components';
 import { ServerStyleSheets as MaterialSheets } from '@material-ui/core/styles';
-import theme from '../styles/theme';
-
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const styledSheet = new StyledComponentsSheets();
@@ -40,9 +38,8 @@ class MyDocument extends Document {
             <Html lang="en">
                 <Head>
                     {/* PWA primary color */}
-                    <meta name="theme-color" content={theme.palette.primary.main} />
+                    {/* <meta name="theme-color" content={lightTheme.palette.primary.main} /> */}
                     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"/>
-                    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
                 </Head>
                 <body>
                     <Main />
