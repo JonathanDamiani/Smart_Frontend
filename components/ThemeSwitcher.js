@@ -4,17 +4,19 @@ import PropTypes from 'prop-types';
 import { Switch } from '@material-ui/core';
 import { isDarkThemeVar } from '../apollo';
 import { Query } from './';
-import { GET_IS_DARK_THEME } from '../apollo/queries';
+import { USER_CONFIG } from '../apollo/queries';
+import cookieCutter from 'cookie-cutter';
 
-const ThemeSwitcher = props => {
+const ThemeSwitcher = () => {
 
     const HandleThemeChange = () => {
         isDarkThemeVar(!isDarkThemeVar())
+        cookieCutter.set('isDarkTheme', isDarkThemeVar());
     }
 
     return (
         <Fragment>
-            <Query query={GET_IS_DARK_THEME} id="null">
+            <Query query={USER_CONFIG}>
                 {({data: { isDarkTheme }}) => {
                     return (
                         <Switch

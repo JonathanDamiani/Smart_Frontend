@@ -2,6 +2,7 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document';
 import { ServerStyleSheet as StyledComponentsSheets } from 'styled-components';
 import { ServerStyleSheets as MaterialSheets } from '@material-ui/core/styles';
+
 class MyDocument extends Document {
     static async getInitialProps(ctx) {
         const styledSheet = new StyledComponentsSheets();
@@ -17,7 +18,8 @@ class MyDocument extends Document {
                     ),
                 })
     
-            const initialProps = await Document.getInitialProps(ctx)
+            const initialProps = await Document.getInitialProps(ctx);
+            
 
             return {
                 ...initialProps,
